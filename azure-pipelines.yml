@@ -1,0 +1,13 @@
+trigger: none
+pr: none
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    echo "Azure DevOps Fork PR Test"
+    echo "Repository: $(Build.Repository.Name)"
+    echo "Branch: $(Build.SourceBranch)"
+    echo "Reason: $(Build.Reason)"
+  displayName: 'Fork PR Test'
